@@ -1,93 +1,236 @@
-# bluetooth_print
+[![pub package](https://img.shields.io/pub/v/bluetooth_print.svg)](https://pub.dartlang.org/packages/bluetooth_print)
 
 
+## Introduction
+Fork from
 
-## Getting started
+BluetoothPrint is a bluetooth plugin for [Flutter](https://flutter.dev), a new mobile SDK to help developers build bluetooth thermal printer apps for both iOS and Android.(for example, Gprinter pt-280、pt-380、gp-1324、gp-2120 eg.)
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+### Underway(please suggest)
+[ ] print x,y positions  
+[ ] set paper size  
+[ ] more print examples
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+### verison
+4.0.0（flutter 3.x）    
+3.0.0（flutter 2.x）      
+2.0.0（flutter 1.12）       
+1.2.0（flutter 1.9） 
 
-## Add your files
+## Features
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+|                         |      Android       |         iOS          |             Description            |
+| :---------------        | :----------------: | :------------------: |  :-------------------------------- |
+| scan                    | :white_check_mark: |  :white_check_mark:  | Starts a scan for Bluetooth Low Energy devices. |
+| connect                 | :white_check_mark: |  :white_check_mark:  | Establishes a connection to the device. |
+| disconnect              | :white_check_mark: |  :white_check_mark:  | Cancels an active or pending connection to the device. |
+| state                   | :white_check_mark: |  :white_check_mark:  | Stream of state changes for the Bluetooth Device. |
+| print test message      | :white_check_mark: |  :white_check_mark:  | print device test message. |
+| print text              | :white_check_mark: |  :white_check_mark:  | print custom text, support layout. |
+| print image             | :white_check_mark: |  :white_check_mark:  | print image. |
+| print qrcode            | :white_check_mark: |  :white_check_mark:  | print qrcode,support change size. |
+| print barcode           | :white_check_mark: |  :white_check_mark:  | print barcode |
 
-```
-cd existing_repo
-git remote add origin https://gitlab.com/Emik996/bluetooth_print.git
-git branch -M main
-git push -uf origin main
-```
-
-## Integrate with your tools
-
-- [ ] [Set up project integrations](https://gitlab.com/Emik996/bluetooth_print/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
 ## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+[Example](https://github.com/thon-ju/bluetooth_print/blob/master/example/lib/main.dart)
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+### To use this plugin :
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+- add the dependency to your [pubspec.yaml](https://github.com/thon-ju/bluetooth_print/blob/master/example/pubspec.yaml) file.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+```yaml
+  dependencies:
+    flutter:
+      sdk: flutter
+    bluetooth_print:
+```
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+### Add permissions for Bluetooth
+We need to add the permission to use Bluetooth and access location:
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+#### **Android**
+In the **android/app/src/main/AndroidManifest.xml** let’s add:
 
-## License
-For open source projects, say how it is licensed.
+```xml 
+	 <uses-permission android:name="android.permission.BLUETOOTH" />  
+	 <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+	 <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />  
+	 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>  
+ <application
+```
+#### **IOS**
+In the **ios/Runner/Info.plist** let’s add:
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+```dart 
+	<dict>  
+	    <key>NSBluetoothAlwaysUsageDescription</key>  
+	    <string>Need BLE permission</string>  
+	    <key>NSBluetoothPeripheralUsageDescription</key>  
+	    <string>Need BLE permission</string>  
+	    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>  
+	    <string>Need Location permission</string>  
+	    <key>NSLocationAlwaysUsageDescription</key>  
+	    <string>Need Location permission</string>  
+	    <key>NSLocationWhenInUseUsageDescription</key>  
+	    <string>Need Location permission</string>
+```
+
+For location permissions on iOS see more at: [https://developer.apple.com/documentation/corelocation/requesting_authorization_for_location_services](https://developer.apple.com/documentation/corelocation/requesting_authorization_for_location_services)
+
+### init a BluetoothPrint instance
+
+```dart
+import 'package:bluetooth_print/bluetooth_print.dart';
+import 'package:bluetooth_print/bluetooth_print_model.dart';
+
+
+BluetoothPrint bluetoothPrint = BluetoothPrint.instance;
+```
+
+### scan
+```dart
+// begin scan
+bluetoothPrint.startScan(timeout: Duration(seconds: 4));
+
+// get devices
+StreamBuilder<List<BluetoothDevice>>(
+    stream: bluetoothPrint.scanResults,
+    initialData: [],
+    builder: (c, snapshot) => Column(
+      children: snapshot.data.map((d) => ListTile(
+        title: Text(d.name??''),
+        subtitle: Text(d.address),
+        onTap: () async {
+          setState(() {
+            _device = d;
+          });
+        },
+        trailing: _device!=null && _device.address == d.address?Icon(
+          Icons.check,
+          color: Colors.green,
+        ):null,
+      )).toList(),
+    ),
+  ),
+```
+
+### connect
+```dart
+await bluetoothPrint.connect(_device);
+```
+
+### disconnect
+```dart
+await bluetoothPrint.disconnect();
+```
+
+### listen state
+```dart
+      bluetoothPrint.state.listen((state) {
+      print('cur device status: $state');
+# bluetooth_print
+
+      switch (state) {
+        case BluetoothPrint.CONNECTED:
+          setState(() {
+            _connected = true;
+          });
+          break;
+        case BluetoothPrint.DISCONNECTED:
+          setState(() {
+            _connected = false;
+          });
+          break;
+        default:
+          break;
+      }
+    });
+```
+A new flutter plugin project.
+
+### print (esc command, receipt mode)
+```dart
+    Map<String, dynamic> config = Map();
+    List<LineText> list = List();
+    list.add(LineText(type: LineText.TYPE_TEXT, content: 'A Title', weight: 1, align: LineText.ALIGN_CENTER,linefeed: 1));
+    list.add(LineText(type: LineText.TYPE_TEXT, content: 'this is conent left', weight: 0, align: LineText.ALIGN_LEFT,linefeed: 1));
+    list.add(LineText(type: LineText.TYPE_TEXT, content: 'this is conent right', align: LineText.ALIGN_RIGHT,linefeed: 1));
+    list.add(LineText(linefeed: 1));
+    list.add(LineText(type: LineText.TYPE_BARCODE, content: 'A12312112', size:10, align: LineText.ALIGN_CENTER, linefeed: 1));
+    list.add(LineText(linefeed: 1));
+    list.add(LineText(type: LineText.TYPE_QRCODE, content: 'qrcode i', size:10, align: LineText.ALIGN_CENTER, linefeed: 1));
+    list.add(LineText(linefeed: 1));
+## Getting Started
+
+    ByteData data = await rootBundle.load("assets/images/guide3.png");
+    List<int> imageBytes = data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
+    String base64Image = base64Encode(imageBytes);
+    list.add(LineText(type: LineText.TYPE_IMAGE, content: base64Image, align: LineText.ALIGN_CENTER, linefeed: 1));
+This project is a starting point for a Flutter
+[plug-in package](https://flutter.dev/developing-packages/),
+a specialized package that includes platform-specific implementation code for
+Android and/or iOS.
+
+    await bluetoothPrint.printReceipt(config, list);
+```
+For help getting started with Flutter, view our 
+[online documentation](https://flutter.dev/docs), which offers tutorials, 
+samples, guidance on mobile development, and a full API reference.
+
+### print (tsc command, label mode)
+```dart
+    Map<String, dynamic> config = Map();
+    config['width'] = 40; // 标签宽度，单位mm
+    config['height'] = 70; // 标签高度，单位mm
+    config['gap'] = 2; // 标签间隔，单位mm
+
+    // x、y坐标位置，单位dpi，1mm=8dpi
+    List<LineText> list = List();
+    list.add(LineText(type: LineText.TYPE_TEXT, x:10, y:10, content: 'A Title'));
+    list.add(LineText(type: LineText.TYPE_TEXT, x:10, y:40, content: 'this is content'));
+    list.add(LineText(type: LineText.TYPE_QRCODE, x:10, y:70, content: 'qrcode i\n'));
+    list.add(LineText(type: LineText.TYPE_BARCODE, x:10, y:190, content: 'qrcode i\n'));
+
+    List<LineText> list1 = List();
+    ByteData data = await rootBundle.load("assets/images/guide3.png");
+    List<int> imageBytes = data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
+    String base64Image = base64Encode(imageBytes);
+    list1.add(LineText(type: LineText.TYPE_IMAGE, x:10, y:10, content: base64Image,));
+
+    await bluetoothPrint.printLabel(config, list);
+    await bluetoothPrint.printLabel(config, list1);
+```
+
+
+## Troubleshooting
+#### ios import third party library
+[Please Read link: https://stackoverflow.com/questions/19189463/cocoapods-podspec-issue)         
+*.podspec add:
+```
+# .a filename must begin with lib, eg. 'libXXX.a'
+s.vendored_libraries = '**/*.a'
+```
+
+#### error:'State restoration of CBCentralManager is only allowed for applications that have specified the "bluetooth-central" background mode'    
+info.plist add:
+```
+<key>NSBluetoothAlwaysUsageDescription</key>
+<string>Allow App use bluetooth?</string>
+<key>NSBluetoothPeripheralUsageDescription</key>
+<string>Allow App use bluetooth?</string>
+<key>UIBackgroundModes</key>
+<array>
+    <string>bluetooth-central</string>
+    <string>bluetooth-peripheral</string>
+</array>
+```
+
+## FAQ Support
+you can join this [QQ](https://im.qq.com/index.shtml) group, feedback your problem  
+<img src="assets/bluetooth_print.png">
+
+## Thanks For
+- [flutter_blue](https://github.com/pauldemarco/flutter_blue)
